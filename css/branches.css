@@ -1,0 +1,29 @@
+.our-branches .branches-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--size-600);
+}
+
+.our-branches .branches-container .card {
+  opacity: 0;
+}
+
+.our-branches .branches-container .card-body {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 16%);
+  padding: var(--size-600);
+}
+
+.our-branches .branches-container .card-body ul {
+  gap: var(--size-600);
+}
+
+.our-branches .branches-container .card-body ul li i {
+  margin-right: var(--size-200);
+}
+
+/* Mobile small screen */
+@media only screen and (max-width: 600px) {
+  .our-branches .branches-container {
+    grid-template-columns: 1fr;
+  }
+}

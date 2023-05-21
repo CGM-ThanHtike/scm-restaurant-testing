@@ -1,0 +1,71 @@
+.sub-heading {
+  margin-bottom: var(--size-800);
+}
+
+/* about us section */
+.about-us .about-header p {
+  margin-block-end: var(--size-850);
+  width: clamp(35ch, 83%, 111ch);
+  margin-inline: auto;
+}
+
+/* services section */
+.services .services-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--size-500);
+}
+
+.services .services-content .box {
+  padding: var(--size-600);
+  gap: var(--size-300);
+}
+
+/* Chef section */
+.chefs .chefs-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--size-600);
+}
+
+.chefs .chefs-content .card {
+  opacity: 0;
+}
+
+.chefs .chefs-content .card .card-image {
+  margin-bottom: var(--size-400);
+}
+
+.chefs .chefs-content .card .card-image img {
+  width: 100%;
+}
+
+.chefs .chefs-content .card .card-body h5,
+.chefs .chefs-content .card .card-body p {
+  margin-block-end: var(--size-300);
+}
+
+.chefs .chefs-content .card .card-body .card-icon-box {
+  display: inline-flex;
+  justify-content: center;
+  gap: var(--size-600);
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  .services .services-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chefs .chefs-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--size-600);
+  }
+}
+
+/* Mobile small screen */
+@media only screen and (max-width: 600px) {
+  :where(.box, .card) p {
+    font-size: var(--fs-200);
+  }
+}

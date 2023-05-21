@@ -1,0 +1,31 @@
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--size-800);
+}
+
+.copy-right {
+  padding-block: var(--size-400);
+}
+
+.d-sp-block {
+  display: none;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile small screen */
+@media only screen and (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .d-sp-block {
+    display: block;
+  }
+}

@@ -1,0 +1,329 @@
+/* header */
+.primary-header {
+  background: url(../img/sec_herobanner_img01.jpg)no-repeat center center/cover;
+  width: 100%;
+  height: 600px;
+}
+
+.primary-header .hero-content h1 {
+  width: 15ch;
+}
+
+/* our-story section */
+.our-story .story-container .story-content-container {
+  padding: 0 var(--size-600) var(--size-600);
+  opacity: 0;
+}
+
+.our-story .story-container h3 {
+  margin-bottom: var(--size-850);
+}
+
+.our-story .story-container p {
+  margin-bottom: var(--size-400);
+}
+
+.our-story .story-image-container {
+  opacity: 0;
+}
+
+.our-story .story-image-container .story-image {
+  position: relative;
+  max-width: fit-content;
+  margin-left: auto;
+}
+
+.our-story .story-image-container .story-image::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 30px;
+  right: 30px;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed var(--clr-accent-400);
+}
+
+.our-story .story-image-container .story-image img {
+  margin-left: auto;
+}
+
+/* our offer section */
+.our-offer {
+  background: url(../img/sec_offer_img01.jpg)no-repeat center center/cover;
+}
+
+.our-offer h3 {
+  margin-bottom: 3.5rem;
+}
+
+.our-offer .offer-content .box {
+  padding: var(--size-600) var(--size-700);
+  gap: var(--size-300);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+  opacity: 0;
+}
+
+/* our-menu section */
+.our-menu h3 {
+  margin-bottom: var(--size-850);
+}
+
+.our-menu .container>p {
+  margin-bottom: var(--size-600);
+}
+
+/*Naming grid template areas */
+.img-mm {
+  grid-area: img-mm;
+}
+
+.body-mm {
+  grid-area: body-mm;
+}
+
+.img-cn {
+  grid-area: img-cn;
+}
+
+.body-cn {
+  grid-area: body-cn;
+}
+
+.img-th {
+  grid-area: img-th;
+}
+
+.body-th {
+  grid-area: body-th;
+}
+
+.img-ds {
+  grid-area: img-ds;
+}
+
+.body-ds {
+  grid-area: body-ds;
+}
+
+.our-menu .menu-content {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "img-mm body-mm img-cn body-cn"
+    "body-th img-th body-ds img-ds";
+}
+
+.our-menu .menu-content img {
+  width: 100%;
+}
+
+.our-menu .menu-content .body-box {
+  padding: min(1.7vw, 2.625rem);
+}
+
+/* our branches section */
+.our-branches {
+  background: url(../img/sec_ourbranches_img01.jpg)no-repeat center center/cover;
+}
+
+.our-branches h3 {
+  margin-bottom: 7rem;
+}
+
+/* changing style to glassmorphism effect */
+.our-branches .branch-box {
+  position: relative;
+  padding: var(--size-300) var(--size-900);
+  margin-left: var(--size-800);
+  border: 1px solid var(--clr-neutral-100);
+  background: rgba(255, 255, 255, 0.125);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 100vmax;
+  border: 2px solid var(--clr-neutral-100);
+  flex: 0 0 44.5%;
+  max-width: 44.5%;
+  transition: backdrop-filter 0.25s ease;
+  opacity: 0;
+}
+
+.our-branches .branch-box:hover {
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+.our-branches .branch-box:hover p {
+  font-weight: var(--fw-bold);
+}
+
+.our-branches .branch-banner {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: var(--size-800);
+  column-gap: min(var(--size-400), var(--size-100));
+}
+
+.our-branches .store-icon {
+  padding: var(--size-500);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-3rem, -50%);
+  transition: transform 0.10s ease-in-out;
+}
+
+.our-branches .store-icon i {
+  font-size: 3rem;
+}
+
+/* Primary footer */
+.primary-footer .footer-box {
+  opacity: 79%;
+}
+
+.primary-footer .footer-box .box h5 {
+  margin-bottom: var(--size-300);
+}
+
+.primary-footer .copy-right {
+  padding-block: var(--size-200);
+}
+
+/* Tablet */
+@media only screen and (max-width: 1024px) {
+  .our-story .story-image-container .story-image {
+    margin-inline: auto;
+  }
+
+  .our-offer .offer-content {
+    gap: 1rem;
+  }
+
+  .our-offer .offer-content .box {
+    padding: var(--size-400) var(--size-500);
+  }
+
+  .our-menu .menu-content {
+    gap: 1rem;
+    grid-template-areas:
+      "img-mm body-mm body-mm"
+      "img-cn body-cn body-cn"
+      "body-th body-th img-th"
+      "body-ds body-ds img-ds";
+  }
+
+  .our-menu .menu-content .body-box {
+    padding: var(--size-700);
+  }
+
+  .our-branches .branch-banner {
+    flex-wrap: wrap;
+  }
+
+  .our-branches .branch-box {
+    flex: 0 0 65%;
+    max-width: 65%;
+    margin-inline: auto;
+  }
+
+  .our-branches .branch-banner {
+    margin-left: 2.5rem;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  .primary-header {
+    background: url(/img/sec_herobanner_sp_img01.png)no-repeat center center/cover;
+    width: 100%;
+    height: 100vmax;
+  }
+
+  .primary-header .hero-content {
+    align-items: flex-end;
+    padding-bottom: var(--size-900);
+  }
+
+  .our-offer {
+    background: url(/img/sec_offer_sp_img01.png)no-repeat center center/cover;
+  }
+
+  .our-offer .offer-content .box {
+    max-width: fit-content;
+    margin-inline: auto;
+  }
+
+  .our-menu .menu-content {
+    gap: 0;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      "img-mm body-mm"
+      "body-cn img-cn"
+      "img-th body-th"
+      "body-ds img-ds";
+  }
+
+  .our-menu .menu-content .body-box {
+    padding: var(--size-800);
+    justify-content: space-around;
+  }
+
+  .our-branches h3 {
+    margin-bottom: 4rem;
+  }
+
+  .our-branches .branch-box {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .our-branches .store-icon i {
+    font-size: 2.5rem;
+  }
+}
+
+/* Mobile small screen */
+@media only screen and (max-width: 600px) {
+  .our-story .story-image-container .story-image {
+    max-width: 85%;
+  }
+
+  .our-story .story-image-container .story-image::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .our-menu .menu-content .body-box {
+    padding: var(--size-500);
+  }
+
+  .our-menu .menu-content .body-box p {
+    display: none;
+  }
+
+  .our-offer .offer-content .box p {
+    max-width: 35ch;
+  }
+
+  .our-branches .branch-banner {
+    margin-left: 2rem;
+  }
+
+  .our-branches .branch-box {
+    flex: 0 0 90%;
+    max-width: 90%;
+    padding: var(--size-300) var(--size-800);
+  }
+
+  .our-branches .store-icon i {
+    font-size: 1.875rem;
+  }
+
+  .our-branches .branch-banner .branch-box p {
+    font-size: var(--fs-300);
+  }
+}
